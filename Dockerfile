@@ -19,10 +19,10 @@ RUN npm install -g @ionic-native/core
 RUN npm install -g @ionic-native/bluetooth-serial
 RUN npm install -g esc-pos-encoder-ionic --save
 
-RUN cd /tmp && \
-    ionic start myNewProject blank --type=ionic-angular --capacitor && \
-    cd myNewProject && \
-    ionic build && \
-    ionic capacitor build android --no-open && \
-    rm -rf /tmp/myNewProject && \
+RUN cd /tmp 
+RUN ionic start myNewProject blank --type=ionic-angular --capacitor 
+RUN cd myNewProject 
+RUN ionic build 
+RUN ionic capacitor build android --no-open 
+RUN rm -rf /tmp/myNewProject && \
     rm -rf /var/lib/apt/lists/* && apt-get clean
