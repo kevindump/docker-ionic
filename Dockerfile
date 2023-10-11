@@ -1,6 +1,7 @@
 FROM beevelop/cordova
 
-ENV IONIC_VERSION 6.20.8
+#ENV IONIC_VERSION 6.20.8
+ENV IONIC_VERSION 7.1.1
 
 RUN apt-get update 
 RUN apt-get install -y git bzip2 openssh-client && \
