@@ -13,16 +13,21 @@ RUN npm install -g ajv
 RUN npm install -g @ionic/angular-toolkit
 RUN npm install -g @ionic/cordova-builders
 RUN npm install -g @angular-devkit/build-angular 
-
+RUN npm install -g @angular/cli
+RUN npm install -g @angular/compiler-cli
+RUN npm install -g rxjs
+RUN npm install -g zone.js
+RUN npm install -g @angular/core
+RUN npm install -g @angular/common
 RUN npm install -g @ionic-native/core
 #RUN ionic cordova plugin add cordova-plugin-bluetooth-serial
 RUN npm install -g @ionic-native/bluetooth-serial
 RUN npm install -g esc-pos-encoder-ionic --save
 
-RUN cd /tmp 
-RUN ionic start myNewProject blank --type=ionic-angular --capacitor 
-RUN cd myNewProject 
-RUN ionic build 
-RUN ionic capacitor build android --no-open 
-RUN rm -rf /tmp/myNewProject && \
-    rm -rf /var/lib/apt/lists/* && apt-get clean
+#RUN cd /tmp 
+#RUN ionic start myNewProject blank --type=ionic-angular --capacitor 
+#RUN cd myNewProject 
+#RUN ionic build 
+#RUN ionic capacitor build android --no-open 
+#RUN rm -rf /tmp/myNewProject 
+RUN rm -rf /var/lib/apt/lists/* && apt-get clean
