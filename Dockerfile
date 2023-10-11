@@ -14,10 +14,10 @@ RUN npm install -g @ionic/angular-toolkit
 RUN npm install -g @ionic/cordova-builders
 RUN npm install -g @angular-devkit/build-angular 
 
-RUN npm install @ionic-native/core
-RUN ionic cordova plugin add cordova-plugin-bluetooth-serial
-RUN npm install @ionic-native/bluetooth-serial
-RUN npm install esc-pos-encoder-ionic --save
+RUN npm install -g @ionic-native/core
+#RUN ionic cordova plugin add cordova-plugin-bluetooth-serial
+RUN npm install -g @ionic-native/bluetooth-serial
+RUN npm install -g esc-pos-encoder-ionic --save
 
 RUN cd /tmp && \
     ionic start myNewProject blank --type=ionic-angular --capacitor && \
