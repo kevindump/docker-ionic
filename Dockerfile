@@ -8,6 +8,10 @@ RUN apt-get install -y git bzip2 openssh-client && \
     npm install -g --unsafe-perm @ionic/cli@${IONIC_VERSION} && \
     ionic --version 
     
+RUN cd /opt/android/build-tools/33.0.1/
+RUN cp d8 dx
+RUN cd /opt/android/build-tools/33.0.1/lib
+RUN cp d8.jar dx.jar
 #RUN npm install -g cordova
 #RUN npm install -g jquery
 #RUN npm install -g ajv
