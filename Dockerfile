@@ -1,17 +1,19 @@
 FROM beevelop/cordova
 
-#ENV IONIC_VERSION 6.20.8
-ENV IONIC_VERSION 7.1.1
+ENV IONIC_VERSION 6.19.0
+
+#ENV IONIC_VERSION 6.20.9
+#ENV IONIC_VERSION 7.1.1
 
 RUN apt-get update 
 RUN apt-get install -y git bzip2 openssh-client && \
     npm install -g --unsafe-perm @ionic/cli@${IONIC_VERSION} && \
     ionic --version 
     
-RUN cd /opt/android/build-tools/33.0.1/
-RUN cp d8 dx
-RUN cd /opt/android/build-tools/33.0.1/lib
-RUN cp d8.jar dx.jar
+#RUN cd /opt/android/build-tools/33.0.1/
+#RUN cp d8 dx
+#RUN cd /opt/android/build-tools/33.0.1/lib
+#RUN cp d8.jar dx.jar
 #RUN npm install -g cordova
 #RUN npm install -g jquery
 #RUN npm install -g ajv
